@@ -21,6 +21,21 @@
           <td>{{$product->series}}</td>
           <td>{{$product->type}}</td>
           <td>{{$product->sale_date}}</td>
+          <td>
+            <a href="{{route('comics.show', $product->id)}}" class="btn btn-primary">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+          </td>
+          <td>
+            <a href="" class="btn btn-warning">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+          </td>
+          <td>
+            <a href="" class="btn btn-danger">
+                <i class="fa-solid fa-trash"></i>
+            </a>
+          </td>
 
         </tr>
         @empty

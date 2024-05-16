@@ -1,6 +1,6 @@
 <header>
 <div class="container my-3 ">
-    <h1 class="text-center mb-3 ">Comics</h1>
+    <h1 class="text-center my-5 ">Comics</h1>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
 

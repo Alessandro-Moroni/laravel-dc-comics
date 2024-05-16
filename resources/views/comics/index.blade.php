@@ -2,9 +2,9 @@
 
 @section('content')
 
-<h1 class="text-center">Comics</h1>
 
-<table class="table">
+
+<table class="table mt-5 ">
     <thead>
       <tr>
         <th scope="col">Titolo</th>

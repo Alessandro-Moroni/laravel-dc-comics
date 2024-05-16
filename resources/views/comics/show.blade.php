@@ -4,7 +4,7 @@
 
 <h2 class="text-center mb-5 ">{{$comic->title}}</h2>
 
-<div class="row row-cols-2  my-3 ">
+<div class="row row-cols-2  my-5 ">
 
     <div class="col d-flex justify-content-center">
         <img src="{{$comic->thumb}}" class="rounded h-100" style="width: 18rem;" alt="{{$comic->title}}">

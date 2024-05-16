@@ -28,7 +28,7 @@
           </td>
           <td>
             <a href="" class="btn btn-warning">
-                <i class="fa-solid fa-eye"></i>
+                <i class="fa-solid fa-pen"></i>
             </a>
           </td>
           <td>

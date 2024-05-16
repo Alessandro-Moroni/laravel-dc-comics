@@ -14,15 +14,16 @@
     <div class="col bc-text">
         <h3 class="">{{$comic->series}}</h3>
 
-        <span class="">Exit date: {{$comic->sale_date}}</span>
+        <p class="">Exit date: {{$comic->sale_date}}</p>
         <p class="">Price: {{$comic->price}}</p>
         <p class="">Artists: {{$comic->artists}}</p>
         <p class="">Writers: {{$comic->writers}}</p>
         <p class="">Description: {{$comic->description}}</p>
 
-        <div class="card-body">
+        <div class="card-body float-end">
 
           <a href="{{route('comics.index')}}" class="btn btn-primary">Come back</a>
+
         </div>
     </div>
 

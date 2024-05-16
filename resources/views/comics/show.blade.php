@@ -2,16 +2,16 @@
 
 @section('content')
 
-<h1 class="text-center mb-5 ">{{$comic->title}}</h1>
+<h2 class="text-center mb-5 ">{{$comic->title}}</h2>
 
 <div class="row row-cols-2  my-3 ">
 
-    <div class="col">
+    <div class="col d-flex justify-content-center">
         <img src="{{$comic->thumb}}" class="rounded h-100" style="width: 18rem;" alt="{{$comic->title}}">
 
     </div>
 
-    <div class="col">
+    <div class="col bc-text">
         <h3 class="">{{$comic->series}}</h3>
 
         <span class="">Exit date: {{$comic->sale_date}}</span>
@@ -22,7 +22,7 @@
 
         <div class="card-body">
 
-          <a href="#" class="btn btn-primary">Come back</a>
+          <a href="{{route('comics.index')}}" class="btn btn-primary">Come back</a>
         </div>
     </div>
 

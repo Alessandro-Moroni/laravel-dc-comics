@@ -15,42 +15,42 @@
         </div>
 
         <div class="mb-3">
-          <label for="description" class="form-label">description</label>
+          <label for="description" class="form-label">Description</label>
           <textarea name="description" id="description" class="form-control" cols="30" rows="5"></textarea>
         </div>
 
         <div class="mb-3">
-          <label for="thumb" class="form-label">thumb</label>
+          <label for="thumb" class="form-label">String URL for the image</label>
           <input type="text" name="thumb" class="form-control" id="thumb" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="price" class="form-label">price</label>
+          <label for="price" class="form-label">Price</label>
           <input type="text" name="price" class="form-control" id="price" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="series" class="form-label">series</label>
+          <label for="series" class="form-label">Series</label>
           <input type="text" name="series" class="form-control" id="series" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="sale_date" class="form-label">sale_date</label>
+          <label for="sale_date" class="form-label">Exit Date</label>
           <input type="text" name="sale_date" class="form-control" id="sale_date" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="type" class="form-label">type</label>
+          <label for="type" class="form-label">Type</label>
           <input type="text" name="type" class="form-control" id="type" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="artists" class="form-label">artists</label>
+          <label for="artists" class="form-label">Artists</label>
           <input type="text" name="artists" class="form-control" id="artists" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
-          <label for="writers" class="form-label">writers</label>
+          <label for="writers" class="form-label">Writers</label>
           <input type="text" name="writers" class="form-control" id="writers" aria-describedby="emailHelp">
         </div>
 

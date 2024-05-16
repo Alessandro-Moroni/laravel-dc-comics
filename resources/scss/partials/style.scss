@@ -16,8 +16,18 @@ h4{
     color: rgb(224, 54, 54);
 
 }
+h5{
+    font-size: .8rem;
+}
+.card{
+    font-size: .8rem;
+}
+.img-list{
+    object-fit: cover;
+    height: 440px;
+}
 
-img{
+.img-comic{
     object-fit: cover;
     height: 400px;
 }

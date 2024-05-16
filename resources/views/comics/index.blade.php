@@ -4,13 +4,13 @@
 
 
 
-<table class="table mt-5 ">
+{{-- <table class="table mt-5 ">
     <thead>
       <tr>
-        <th scope="col">Titolo</th>
-        <th scope="col">Serie</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Data</th>
+        <th scope="col">Title</th>
+        <th scope="col">Series</th>
+        <th scope="col">Type</th>
+        <th scope="col">Exit Date</th>
       </tr>
     </thead>
     <tbody>
@@ -44,6 +44,46 @@
 
         @endforelse
 
-  </table>
+  </table> --}}
+
+  <div class="container row row-cols-3 ">
+
+      @foreach ($products as $product)
+
+        <div class="col mb-5 ">
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{$product->thumb}}" class="card-img-top img-list" alt="{{$product->title}}" >
+                <div class="card-body">
+                <h5 class="card-title">{{$product->title}}</h5>
+
+                <p class="card-text">Type: {{$product->type}}</p>
+
+                <span class="card-text">{{$product->series}}</span>
+
+                <p class="card-text">{{$product->sale_date}}</p>
+
+                <a href="{{route('comics.show', $product->id)}}" class="btn btn-primary">
+                    <i class="fa-solid fa-eye"></i>
+                </a>
+
+                <a href="" class="btn btn-warning">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+
+                <a href="" class="btn btn-danger">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        @endforeach
+
+  </div>
 
 @endsection

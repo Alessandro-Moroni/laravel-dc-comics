@@ -2,7 +2,13 @@
 
 @section('content')
 
+
 <h2 class="text-center mb-5 ">{{$comic->title}}</h2>
+
+<a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">
+    <i class="fa-solid fa-pen"></i>
+</a>
+@include('partials.form_delete')
 
 <div class="row row-cols-2  my-5 ">
 

@@ -83,7 +83,9 @@
 
         <button type="submit" class="btn btn-primary me-3">Add Comic</button>
 
-        <button type="reset" class="btn btn-danger">Reset</button>
+        <button type="reset" class="btn btn-danger ">Reset</button>
+
+
 
     </form>
 

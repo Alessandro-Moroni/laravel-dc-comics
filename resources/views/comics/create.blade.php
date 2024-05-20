@@ -4,12 +4,25 @@
 
 <div class="container form-container my-5 p-3">
 
+    @if ($errors->any())
+
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+
+    @endif
+
 
     <form action="{{route('comics.store')}}" method="POST">
 
         @csrf
 
-        @php
+        {{-- Autocompilazione --}}
+        {{-- @php
             $status = 'test fillable';
             $title = 'title';
             $description = 'description';
@@ -33,51 +46,114 @@
                 $artists = 'José Luis García-López-Clay Mann-Rafael Albuquerque-Patrick Gleason-Dan Jurgens-Joe Shuster-Neal Adams-Curt Swan-John Cassaday-Olivier Coipel-Jim Lee';
                 $writers = 'Brad Meltzer-Tom King-Scott Snyder-Geoff Johns-Brian Michael Bendis-Paul Dini-Louise Simonson-Richard Donner-Marv Wolfman-Peter J. Tomasi-Dan Jurgens-Jerry Siegel-Paul Levitz';
             }
-        @endphp
+        @endphp --}}
 
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
-          <input type="text" name="title" class="form-control" id="title" value="{{$title}}" aria-describedby="emailHelp">
+          <input type="text" name="title" class="form-control @error('title') is-invalid @enderror " id="title" value="{{old('title')}}" aria-describedby="emailHelp">
+          @error('title')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
-          <textarea name="description" id="description" value="" class="form-control" cols="50" rows="5">{{$description}}</textarea>
+          <textarea name="description" id="description" value="" class="form-control @error('description') is-invalid @enderror" cols="50" rows="5">{{old('description')}}</textarea>
+          @error('description')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="thumb" class="form-label">String URL for the image</label>
-          <input type="text" name="thumb" class="form-control" id="thumb" value="{{$thumb}}" aria-describedby="emailHelp">
+          <input type="text" name="thumb" class="form-control @error('thumb') is-invalid @enderror" id="thumb" value="{{old('thumb')}}" aria-describedby="emailHelp">
+          @error('thumb')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="price" class="form-label">Price</label>
-          <input type="text" name="price" class="form-control" id="price" value="{{$price}}" aria-describedby="emailHelp">
+          <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" id="price" value="{{old('price')}}" aria-describedby="emailHelp">
+          @error('price')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="series" class="form-label">Series</label>
-          <input type="text" name="series" class="form-control" id="series" value="{{$series}}" aria-describedby="emailHelp">
+          <input type="text" name="series" class="form-control @error('series') is-invalid @enderror" id="series" value="{{old('series')}}" aria-describedby="emailHelp">
+          @error('series')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="sale_date" class="form-label">Exit Date</label>
-          <input type="text" name="sale_date" class="form-control" id="sale_date" value="{{$sale_date}}" aria-describedby="emailHelp">
+          <input type="text" name="sale_date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" value="{{old('sale_date')}}" aria-describedby="emailHelp">
+          @error('sale_date')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="type" class="form-label">Type</label>
-          <input type="text" name="type" class="form-control" id="type" value="{{$type}}" aria-describedby="emailHelp">
+          <input type="text" name="type" class="form-control @error('type') is-invalid @enderror" id="type" value="{{old('type')}}" aria-describedby="emailHelp">
+          @error('type')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="artists" class="form-label">Artists</label>
-          <input type="text" name="artists" class="form-control" id="artists" value="{{$artists}}" aria-describedby="emailHelp">
+          <input type="text" name="artists" class="form-control @error('artists') is-invalid @enderror" id="artists" value="{{old('artists')}}" aria-describedby="emailHelp">
+          @error('artists')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
         <div class="mb-3">
           <label for="writers" class="form-label">Writers</label>
-          <input type="text" name="writers" class="form-control" id="writers" value="{{$writers}}" aria-describedby="emailHelp">
+          <input type="text" name="writers" class="form-control @error('writers') is-invalid @enderror" id="writers" value="{{old('writers')}}" aria-describedby="emailHelp">
+          @error('writers')
+
+          <small class="text-danger">
+            {{ $message }}
+          </small>
+
+          @enderror
         </div>
 
 

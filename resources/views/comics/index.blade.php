@@ -54,14 +54,14 @@
 
   </table>
 
-  @if (session('deleted'))
+  {{-- @if (session('deleted'))
 
 
   <div class="alert alert-success" role="alert">
      {{ session('deleted') }}
   </div>
 
-  @endif
+  @endif --}}
 
   {{-- <div class="container row row-cols-3 ">
 

@@ -4,7 +4,17 @@
 
 
 
-{{-- <table class="table mt-5 ">
+<table class="table mt-5 ">
+
+    @if (session('deleted'))
+
+
+  <div class="alert alert-success" role="alert">
+     {{ session('deleted') }}
+  </div>
+
+  @endif
+
     <thead>
       <tr>
         <th scope="col">Title</th>
@@ -14,27 +24,25 @@
       </tr>
     </thead>
     <tbody>
-        @forelse ($products as $product)
+        @forelse ($products as $comic)
 
         <tr>
-          <td>{{$product->title}}</td>
-          <td>{{$product->series}}</td>
-          <td>{{$product->type}}</td>
-          <td>{{$product->sale_date}}</td>
+          <td>{{$comic->title}}</td>
+          <td>{{$comic->series}}</td>
+          <td>{{$comic->type}}</td>
+          <td>{{$comic->sale_date}}</td>
           <td>
-            <a href="{{route('comics.show', $product->id)}}" class="btn btn-primary">
+            <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">
                 <i class="fa-solid fa-eye"></i>
             </a>
           </td>
           <td>
-            <a href="{{route('comics.edit', $product->id)}}" class="btn btn-warning">
-                    <i class="fa-solid fa-pen"></i>
-                </a>
+            <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">
+                <i class="fa-solid fa-pen"></i>
+            </a>
           </td>
           <td>
-            <a href="" class="btn btn-danger">
-                <i class="fa-solid fa-trash"></i>
-            </a>
+            @include('partials.form_delete')
           </td>
 
         </tr>
@@ -44,7 +52,7 @@
 
         @endforelse
 
-  </table> --}}
+  </table>
 
   @if (session('deleted'))
 
@@ -55,7 +63,7 @@
 
   @endif
 
-  <div class="container row row-cols-3 ">
+  {{-- <div class="container row row-cols-3 ">
 
 
       @foreach ($products as $comic)
@@ -93,6 +101,6 @@
 
         @endforeach
 
-  </div>
+  </div> --}}
 
 @endsection
